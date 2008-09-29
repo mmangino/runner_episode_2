@@ -1,0 +1,4 @@
+<% for run in @user.runs %>
+  <%= link_to(fb_name(run.user, :capitalize=>true, :use_you=>false),
+              user_runs_url(run.user))%> ran <%= run.distance %> in <%= run.time_hours %> and <%= run.time_minutes %> <br />
+<% end %>
